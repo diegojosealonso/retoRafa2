@@ -22,9 +22,9 @@ public class CocheMejorado {
         this.marca = marca;
         this.modelo = modelo;
         this.anyoFabricacion = anyoFabricacion;
-        this.combustibleActual = 0;
-        this.consumo = 0;
-        this.kilometraje = 0;
+        this.combustibleActual = 0.0;
+        this.consumo = 0.0;
+        this.kilometraje = 0.0;
     }
 
     public String getMarca() {
@@ -75,7 +75,7 @@ public class CocheMejorado {
         this.kilometraje = kilometraje;
     }
 
-    public void conducir(int kilometros) {
+    public void conducir(double kilometros) {
         this.combustibleActual = this.combustibleActual - this.consumo * kilometros;
         this.kilometraje = this.kilometraje + kilometros;
     }
