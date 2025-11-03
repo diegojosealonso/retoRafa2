@@ -87,7 +87,7 @@ public class CocheMejorado {
 
 
     public double getAutonomia(){
-    return combustibleActual - consumo * kilometraje;
+       return this.combustibleActual / this.consumo;
     }
 
 
