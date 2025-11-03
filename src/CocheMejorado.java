@@ -6,7 +6,7 @@ public class CocheMejorado {
     private double consumo;
     private double kilometraje;
 
-    public CocheMejorado(String marca, String modelo, int anyoFabricacion, int combustibleActual, double consumo, double kilometraje) {
+    public CocheMejorado(String marca, String modelo, int anyoFabricacion, double combustibleActual, double consumo, double kilometraje) {
         this.marca = marca;
         this.modelo = modelo;
         this.anyoFabricacion = anyoFabricacion;
@@ -55,8 +55,8 @@ public class CocheMejorado {
         return combustibleActual;
     }
 
-    public void setCombustibleActual(int combustibleActual) {
-        this.combustibleActual = combustibleActual;
+    public void setCombustibleActual(double combustibleActual) {
+        this.combustibleActual = this.combustibleActual;
     }
 
     public double getConsumo() {
@@ -78,6 +78,7 @@ public class CocheMejorado {
     public void conducir(double kilometros) {
         this.combustibleActual = this.combustibleActual - this.consumo * kilometros;
         this.kilometraje = this.kilometraje + kilometros;
+   
     }
 
 
@@ -85,11 +86,9 @@ public class CocheMejorado {
         this.combustibleActual = this.combustibleActual + litros;
     }
 
-
     public double getAutonomia(){
        return this.combustibleActual / this.consumo;
     }
-
 
     @Override
     public String toString() {
